@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgfupgxg2uslt"]
+
+[ext_resource type="Texture2D" uid="uid://bgmeo7m4l4iju" path="res://dorm1_draft.png" id="1_jtfp4"]
+
+[node name="Dorm1" type="Node2D"]
+
+[node name="Dorm1Draft" type="Sprite2D" parent="."]
+position = Vector2(234, 199)
+scale = Vector2(1.79344, 2.17956)
+texture = ExtResource("1_jtfp4")
