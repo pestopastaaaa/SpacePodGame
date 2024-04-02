@@ -1,10 +1,10 @@
+StaticBody2D
 CollisionShape2D
-CharacterBody2D
 Area2D
+CharacterBody2D
 LineEdit
 CenterContainer
 ColorRect
-StaticBody2D
 CollisionPolygon2D
 Camera2D
 Node2D

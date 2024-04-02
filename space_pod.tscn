@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://q07mhmyixux3"]
+[gd_scene load_steps=7 format=3 uid="uid://q07mhmyixux3"]
 
 [ext_resource type="Texture2D" uid="uid://cxcneov3vd863" path="res://space_pod_final.png" id="1_wpdp3"]
 [ext_resource type="PackedScene" uid="uid://d1mdnxcpqn524" path="res://leggy.tscn" id="2_8qe3e"]
 [ext_resource type="PackedScene" uid="uid://by1nbac67yryb" path="res://player.tscn" id="2_ri6ng"]
 [ext_resource type="Texture2D" uid="uid://doxhrjbkm5lje" path="res://marktiny.png" id="3_33c5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlcvb"]
+size = Vector2(281.5, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldx03"]
+size = Vector2(284, 37)
 
 [node name="SpacePod" type="Node2D"]
 
@@ -11,6 +17,19 @@
 position = Vector2(-261, -18.9999)
 scale = Vector2(0.787692, 0.866897)
 texture = ExtResource("1_wpdp3")
+
+[node name="camera" type="StaticBody2D" parent="."]
+position = Vector2(-522, -421)
+
+[node name="Area2D" type="Area2D" parent="camera"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera/Area2D"]
+position = Vector2(44.25, -39.5)
+shape = SubResource("RectangleShape2D_vlcvb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camera"]
+position = Vector2(45, -62.5)
+shape = SubResource("RectangleShape2D_ldx03")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -50,7 +69,7 @@ scale = Vector2(0.388462, 0.352159)
 texture = ExtResource("3_33c5i")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ri6ng")]
-position = Vector2(184, 300)
+position = Vector2(110, 187)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 

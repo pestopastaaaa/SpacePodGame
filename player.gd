@@ -10,10 +10,18 @@ extends CharacterBody2D
 @onready var axis = Vector2.ZERO
 
 
+var leggy_in_range = false
+var check_cameras = false
 
 
 
 func _physics_process(delta):
+	
+	if leggy_in_range == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			DialogueManager.show_example_dialogue_balloon(load("res://leggy.dialogue"), "leggy")
+	
+	
 	move(delta)
 	
 	
@@ -55,8 +63,14 @@ func apply_movement(accel):
 
 
 func _on_detection_area_body_entered(body):
-	pass
+	if body.has_method("leggy"):
+		leggy_in_range = true
+	if body.has_method("camera"):
+		check_cameras = true
 
 
 func _on_detection_area_body_exited(body):
-	pass # Replace with function body.
+	if body.has_method("leggy"):
+		leggy_in_range = false
+	if body.has_method("camera"):
+		check_cameras = false
