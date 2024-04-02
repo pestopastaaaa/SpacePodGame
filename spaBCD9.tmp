@@ -12,6 +12,9 @@ position = Vector2(-261, -18.9999)
 scale = Vector2(0.787692, 0.866897)
 texture = ExtResource("1_wpdp3")
 
+[node name="Leggy" parent="." instance=ExtResource("2_8qe3e")]
+position = Vector2(-1759, -1940)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -51,8 +54,8 @@ texture = ExtResource("3_33c5i")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ri6ng")]
 position = Vector2(184, 300)
+MAX_SPEED = 500
+ACCELERATION = 1700
+FRICTION = 1200
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
-[node name="Leggy" parent="." instance=ExtResource("2_8qe3e")]
-position = Vector2(-1775, -1940)

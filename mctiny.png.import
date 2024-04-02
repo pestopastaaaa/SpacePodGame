@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkis8i134twtg"
-path="res://.godot/imported/tiny_sprite_fake.png-8d9006eaf51ad5b7df8e9bb19e014d34.ctex"
+uid="uid://soitdmptyvpm"
+path="res://.godot/imported/mctiny.png-9b6230278ed00d44b3fe1e5b242f9595.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiny_sprite_fake.png"
-dest_files=["res://.godot/imported/tiny_sprite_fake.png-8d9006eaf51ad5b7df8e9bb19e014d34.ctex"]
+source_file="res://mctiny.png"
+dest_files=["res://.godot/imported/mctiny.png-9b6230278ed00d44b3fe1e5b242f9595.ctex"]
 
 [params]
 

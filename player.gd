@@ -52,3 +52,11 @@ func apply_movement(accel):
 
 
 
+
+
+func _on_detection_area_body_entered(body):
+	pass
+
+
+func _on_detection_area_body_exited(body):
+	pass # Replace with function body.

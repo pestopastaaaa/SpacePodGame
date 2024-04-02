@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1mdnxcpqn524"]
+
+[ext_resource type="Texture2D" uid="uid://cqrvpeh6ru2w8" path="res://leggy.png" id="1_dlp6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taddp"]
+size = Vector2(2782, 764)
+
+[node name="Leggy" type="CharacterBody2D"]
+
+[node name="Leggy" type="Sprite2D" parent="."]
+position = Vector2(993, 742)
+scale = Vector2(0.508205, 0.512414)
+texture = ExtResource("1_dlp6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1117, 504)
+shape = SubResource("RectangleShape2D_taddp")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://hnvlk33rul6y"
+path="res://.godot/imported/leggy.dialogue-6fe5ac06925156ee40ef700e5a65e739.tres"
+
+[deps]
+
+source_file="res://leggy.dialogue"
+dest_files=["res://.godot/imported/leggy.dialogue-6fe5ac06925156ee40ef700e5a65e739.tres"]
+
+[params]
+
+defaults=true

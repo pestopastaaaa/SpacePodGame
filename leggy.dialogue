@@ -1,0 +1,14 @@
+~ leggy
+
+if global.found_leggy == true
+	MC: I should check the cameras, I can't see anything through the windows
+	=> END!
+
+if global.check_cameras == false
+	MC: I should check the cameras, I can't see anything through the windows
+	=> END!
+
+if global.check_cameras == true 
+	OBJECTIVE: Retreive alien manual from information room
+
+=> END
