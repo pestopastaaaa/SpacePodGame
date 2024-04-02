@@ -6,19 +6,14 @@ extends CharacterBody2D
 @export var ACCELERATION = 1700
 @export var FRICTION = 1200
 
+@export var climbing = false
 
 @onready var axis = Vector2.ZERO
-
-
-
 
 
 func _physics_process(delta):
 	move(delta)
 	
-	
-	
-
 func get_input_axis():
 	axis.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
 	axis.y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
@@ -39,6 +34,8 @@ func move(delta):
 
 func apply_friction(amount):
 	if velocity.length() > amount:
+		if climbing:
+			amount = amount*3
 		velocity -= velocity.normalized() * amount
 	
 	else:
@@ -47,7 +44,12 @@ func apply_friction(amount):
 		
 
 func apply_movement(accel):
-	velocity += accel
+	if climbing:
+		accel *= 4
+		velocity += accel
+		velocity = velocity.limit_length(MAX_SPEED/2)
+	else:
+		velocity += accel
 	velocity = velocity.limit_length(MAX_SPEED)
 
 
