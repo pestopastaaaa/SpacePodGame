@@ -9,6 +9,10 @@ height = 196.0
 
 [node name="player" type="CharacterBody2D" groups=["Climber"]]
 script = ExtResource("1_c7ryf")
+MAX_SPEED = null
+ACCELERATION = null
+FRICTION = null
+climbing = null
 
 [node name="TinySpriteFake" type="Sprite2D" parent="."]
 position = Vector2(53.5, 90)

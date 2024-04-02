@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://q07mhmyixux3"]
+[gd_scene load_steps=4 format=3 uid="uid://q07mhmyixux3"]
 
 [ext_resource type="Texture2D" uid="uid://cxcneov3vd863" path="res://space_pod_final.png" id="1_wpdp3"]
 [ext_resource type="PackedScene" uid="uid://by1nbac67yryb" path="res://player.tscn" id="2_ri6ng"]
+[ext_resource type="PackedScene" uid="uid://b56yh8vgtgxkv" path="res://ladder.tscn" id="3_fruav"]
 
 [node name="SpacePod" type="Node2D"]
 
@@ -14,3 +15,6 @@ texture = ExtResource("1_wpdp3")
 position = Vector2(184, 300)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Ladder" parent="." instance=ExtResource("3_fruav")]
+position = Vector2(-874, 2)
