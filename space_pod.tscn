@@ -55,4 +55,4 @@ position = Vector2(184, 300)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="Leggy" parent="." instance=ExtResource("2_8qe3e")]
-position = Vector2(-1775, -1940)
+position = Vector2(-1951, -1960)
