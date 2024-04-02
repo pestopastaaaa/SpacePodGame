@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712058467
+::res://::1712059334
 icon.svg::CompressedTexture2D::2202403824966665701::1712048203::1712048215::1::::<><>::
-main.dialogue::Resource::1171848513347584209::1712058487::1712058487::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+main.dialogue::Resource::1171848513347584209::1712059677::1712059677::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 player.gd::GDScript::-1::1712050731::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4125417863853134869::1712058467::0::1::::<><>::res://player.gd<>uid://bkis8i134twtg::::res://tiny_sprite_fake.png
-space_pod.tscn::PackedScene::1176595702658570930::1712058467::0::1::::<><>::uid://cxcneov3vd863::::res://space_pod_final.png<>uid://by1nbac67yryb::::res://player.tscn
+player.tscn::PackedScene::4125417863853134869::1712059334::0::1::::<><>::res://player.gd<>uid://bkis8i134twtg::::res://tiny_sprite_fake.png
+space_pod.tscn::PackedScene::1176595702658570930::1712059334::0::1::::<><>::uid://cxcneov3vd863::::res://space_pod_final.png<>uid://by1nbac67yryb::::res://player.tscn
 space_pod_final.png::CompressedTexture2D::6392110759718856934::1712048261::1712048266::1::::<><>::
 tiny_sprite_fake.png::CompressedTexture2D::3105976440837995468::1712048649::1712048649::1::::<><>::
 ::res://addons/::1712058280

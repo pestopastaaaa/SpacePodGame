@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://8mwnr1oj3nhg"]
+
+[ext_resource type="Theme" uid="uid://d21ltwllh6c4p" path="res://new_theme.tres" id="1_k3bju"]
+[ext_resource type="Script" path="res://LineEdit.gd" id="2_3q01x"]
+
+[node name="NameScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 157.0
+offset_bottom = 88.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 157.0
+offset_bottom = 88.0
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("1_k3bju")
+text = "Enter your name"
+expand_to_text_length = true
+caret_blink = true
+script = ExtResource("2_3q01x")

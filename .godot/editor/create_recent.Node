@@ -1,3 +1,6 @@
+LineEdit
+CenterContainer
+ColorRect
 StaticBody2D
 CollisionPolygon2D
 CollisionShape2D

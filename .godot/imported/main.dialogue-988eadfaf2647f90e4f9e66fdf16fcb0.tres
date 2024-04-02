@@ -8,7 +8,7 @@ using_states = PackedStringArray()
 titles = {
 "start": "3"
 }
-character_names = PackedStringArray("Mark")
+character_names = PackedStringArray("Aleyna", "Mark")
 first_title = "3"
 lines = {
 "1": {
@@ -17,28 +17,159 @@ lines = {
 "text": "start",
 "type": &"title"
 },
+"11": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!",
+"type": &"dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "21",
+"notes": "",
+"responses": PackedStringArray("13", "16"),
+"tags": PackedStringArray(),
+"text": "uh..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "uh..",
+"type": &"response"
+},
+"14": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "wow",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "wow",
+"type": &"dialogue"
+},
+"15": {
+"id": "15",
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "13",
+"type": &"goto"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"next_id_after": "21",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"response"
+},
+"17": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"parent_id": "16",
+"tags": PackedStringArray(),
+"text": "don't ignore me",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "don't ignore me",
+"type": &"dialogue"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "16",
+"type": &"goto"
+},
+"21": {
+"id": "21",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
 "3": {
-"character": "Mark",
+"character": "Aleyna",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "ah we're going to die",
+"text": "There has to be a way to get you guys back to the main spaceship",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "ah we're going to die",
+"translation_key": "There has to be a way to get you guys back to the main spaceship",
 "type": &"dialogue"
 },
 "5": {
+"character": "Mark",
+"character_replacements": Array[Dictionary]([]),
 "id": "5",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'm telling you, Aleyna, there really isn't",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm telling you, Aleyna, there really isn't",
+"type": &"dialogue"
+},
+"7": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.",
+"type": &"dialogue"
+},
+"9": {
+"character": "Mark",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Shut up, Aleyna",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Shut up, Aleyna",
+"type": &"dialogue"
 }
 }
 raw_text = "~ start
 
-Mark: ah we're going to die
+Aleyna: There has to be a way to get you guys back to the main spaceship
+
+Mark: I'm telling you, Aleyna, there really isn't
+
+Aleyna: Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.
+
+Mark: Shut up, Aleyna
+
+Aleyna: UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!
+
+- uh..
+	Aleyna: wow
+	=> END!
+- ...
+	Aleyna: don't ignore me
+	=> END!
+
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"
