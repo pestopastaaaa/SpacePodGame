@@ -1,0 +1,10 @@
+res://space_pod.tscn
+res://player.tscn
+res://new_theme.tres
+res://LineEdit.gd
+res://name_scene.tscn
+res://global.gd
+res://player.gd
+res://leggy.tscn
+res://leggy.gd
+res://camera.tscn

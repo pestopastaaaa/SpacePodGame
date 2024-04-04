@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://by1nbac67yryb"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_c7ryf"]
+[ext_resource type="Texture2D" uid="uid://soitdmptyvpm" path="res://mctiny.png" id="2_un5f8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2uc3d"]
+radius = 53.0
+height = 196.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8yydk"]
+radius = 167.0
+height = 718.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_c7ryf")
+
+[node name="Mctiny" type="Sprite2D" parent="."]
+position = Vector2(59, 99)
+scale = Vector2(0.396277, 0.310801)
+texture = ExtResource("2_un5f8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56, 101)
+shape = SubResource("CapsuleShape2D_2uc3d")
+
+[node name="Detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_area"]
+position = Vector2(57, 100)
+shape = SubResource("CapsuleShape2D_8yydk")
+
+[connection signal="body_entered" from="Detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_area" to="." method="_on_detection_area_body_exited"]

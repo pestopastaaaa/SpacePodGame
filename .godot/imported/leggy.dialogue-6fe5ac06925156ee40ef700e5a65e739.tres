@@ -1,0 +1,228 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5a8xt"]
+
+[resource]
+script = ExtResource("1_5a8xt")
+using_states = PackedStringArray()
+titles = {
+"leggy": "3"
+}
+character_names = PackedStringArray("MC", "OBJECTIVE")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "leggy",
+"type": &"title"
+},
+"11": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "check_cameras"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"id": "11",
+"next_conditional_id": "15",
+"next_id": "12",
+"next_id_after": "15",
+"type": &"condition"
+},
+"12": {
+"character": "MC",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "I should check the cameras, I can't see anything through the windows",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I should check the cameras, I can't see anything through the windows",
+"type": &"dialogue"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "11",
+"type": &"goto"
+},
+"15": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "check_cameras"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "15",
+"next_conditional_id": "19",
+"next_id": "16",
+"next_id_after": "19",
+"type": &"condition"
+},
+"16": {
+"character": "MC",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "I can't see anything through the cameras either",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I can't see anything through the cameras either",
+"type": &"dialogue"
+},
+"17": {
+"character": "OBJECTIVE",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "19",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Retreive alien manual from information room",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Retreive alien manual from information room",
+"type": &"dialogue"
+},
+"19": {
+"id": "19",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "found_leggy"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "3",
+"next_conditional_id": "7",
+"next_id": "4",
+"next_id_after": "7",
+"type": &"condition"
+},
+"4": {
+"character": "MC",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "I should check the cameras, I can't see anything through the windows",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I should check the cameras, I can't see anything through the windows",
+"type": &"dialogue"
+},
+"5": {
+"id": "5",
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "3",
+"type": &"goto"
+},
+"7": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "leggy_in_range"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"id": "7",
+"next_conditional_id": "11",
+"next_id": "8",
+"next_id_after": "11",
+"type": &"condition"
+},
+"8": {
+"character": "MC",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "I should check the cameras, I can't see anything through the windows",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I should check the cameras, I can't see anything through the windows",
+"type": &"dialogue"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end!",
+"parent_id": "7",
+"type": &"goto"
+}
+}
+raw_text = "~ leggy
+
+if global.found_leggy == true
+	MC: I should check the cameras, I can't see anything through the windows
+	=> END!
+
+if global.leggy_in_range == true
+	MC: I should check the cameras, I can't see anything through the windows
+	=> END!
+
+if global.check_cameras == false
+	MC: I should check the cameras, I can't see anything through the windows
+	=> END!
+
+if global.check_cameras == true 
+	MC: I can't see anything through the cameras either
+	OBJECTIVE: Retreive alien manual from information room
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

@@ -1,0 +1,200 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xmwfg"]
+
+[resource]
+script = ExtResource("1_xmwfg")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Aleyna", "Mark", "OBJECTIVE")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"11": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!",
+"type": &"dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "18",
+"notes": "",
+"responses": PackedStringArray("13", "15"),
+"tags": PackedStringArray(),
+"text": "uh..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "uh..",
+"type": &"response"
+},
+"14": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "18",
+"notes": "",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "wow",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "wow",
+"type": &"dialogue"
+},
+"15": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"next_id_after": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": &"response"
+},
+"16": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "18",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "don't ignore me",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "don't ignore me",
+"type": &"dialogue"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Alarm goes off",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Alarm goes off",
+"type": &"dialogue"
+},
+"20": {
+"character": "Mark",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "oh my god..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "oh my god..",
+"type": &"dialogue"
+},
+"22": {
+"character": "OBJECTIVE",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Survey the space pod",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Survey the space pod",
+"type": &"dialogue"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "There has to be a way to get you guys back to the main spaceship",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There has to be a way to get you guys back to the main spaceship",
+"type": &"dialogue"
+},
+"5": {
+"character": "Mark",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'm telling you, Aleyna, there really isn't",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm telling you, Aleyna, there really isn't",
+"type": &"dialogue"
+},
+"7": {
+"character": "Aleyna",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.",
+"type": &"dialogue"
+},
+"9": {
+"character": "Mark",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Shut up, Aleyna",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Shut up, Aleyna",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start
+
+Aleyna: There has to be a way to get you guys back to the main spaceship
+
+Mark: I'm telling you, Aleyna, there really isn't
+
+Aleyna: Mark, what's gotten into you. You've been barely helping [Player's name] and I. You just most around like a stupid dog.
+
+Mark: Shut up, Aleyna
+
+Aleyna: UGH, DON'T TELL ME TO SHUT UP, [PLAYER'S NAME] SAY SOMETHING!
+
+- uh..
+	Aleyna: wow
+- ...
+	Aleyna: don't ignore me
+
+Alarm goes off 
+
+Mark: oh my god..
+
+OBJECTIVE: Survey the space pod
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

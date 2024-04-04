@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d21ltwllh6c4p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pb2lg"]
+
+[resource]
+default_font_size = 11
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_pb2lg")
